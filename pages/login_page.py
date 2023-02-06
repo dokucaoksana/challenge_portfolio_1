@@ -1,10 +1,17 @@
 from pages.base_page import BasePage
+import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+
+from utils.settings import DEFAULT_LOCATOR_TYPE
 
 
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
-    sign_in_button_xpath = "//child::button"
+    sign_in_button_xpath = "//span[normalize-space()='Sign in']"
     remind_password_xpath = "/child::div/a"
     login_url = ('https://scouts-test.futbolkolektyw.pl/en')
     expected_title = "Scouts panel - sign in"
@@ -26,3 +33,6 @@ class LoginPage(BasePage):
 
     def check_title_of_header(self):
         self.assert_element_text(self.driver, self.title_of_box_xpath, self.header_of_box)
+
+
+

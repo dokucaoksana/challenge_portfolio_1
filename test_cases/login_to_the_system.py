@@ -26,6 +26,7 @@ class TestLoginPage(unittest.TestCase):
         user_login.title_of_page()
         user_login.type_in_email('user01@getnada.com')
         user_login.type_in_password('Test-1234')
+        user_login.wait_for_element_to_be_clickable(locator="//span[normalize-space()='Sign in']")
         user_login.click_on_the_sign_in_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
