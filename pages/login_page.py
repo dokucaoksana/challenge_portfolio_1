@@ -17,6 +17,8 @@ class LoginPage(BasePage):
     expected_title = "Scouts panel - sign in"
     title_of_box_xpath = "//*[@id='__next']/form/div/div[1]/h5"
     header_of_box = 'Scouts Panel'
+    warring_text_xpath = "//span[contains(@class, 'MuiTypography-colorError')]"
+    expected_warning_text = 'Identifier or password invalid.'
 
 
     def type_in_email(self, email):
@@ -39,3 +41,12 @@ class LoginPage(BasePage):
         wait = WebDriverWait(self.driver, 10)
         element = wait.until(EC.element_to_be_clickable((locator_type, locator)))
         time.sleep(3)
+
+    def compare_text(self):
+        self.assert_element_text(self.driver, self.element_text, self.expected_text)
+
+    def compare_warning_text(self):
+        self.assert_element_text(self.driver, self.warring_text_xpath, self.expected_warning_text)
+
+    def taking_text(self):
+        self.take_text(self.driver, self.warring_text_xpath)

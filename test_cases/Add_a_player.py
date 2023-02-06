@@ -6,7 +6,7 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
 from pages.login_page import LoginPage
 from pages.dashboard import Dashboard
-from pages.tsadd_a_player import AddPlayer
+from pages.add_player import AddPlayer
 from selenium.webdriver.common.by import By
 import datetime
 

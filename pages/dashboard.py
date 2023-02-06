@@ -11,7 +11,7 @@ class Dashboard(LoginPage):
     logo_scouts_panel_xpath = "//div[@title='Logo Scouts Panel']"
     players_button_xpath = "//span[normalize-space()='Players']"
     select_lang_xpath = "//span[normalize-space()='Polski']"
-    sign_in_button_xpath = "//span[normalize-space()='Sign in']"
+    sign_in_button_xpath = "//span[normalize-space()='Sign Out']"
     dev_team_button_xpath = "//span[normalize-space()='Dev team contact']"
     add_player_button_xpath = "//span[normalize-space()='Add player']"
     last_created_player_xpath = "//span[normalize-space()='Robbie Lewandowski']"
@@ -27,6 +27,6 @@ class Dashboard(LoginPage):
         self.click_on_the_element(self.add_player_button_xpath)
 
     def title_of_page(self):
-        self.wait_for_element_to_be_clickable(self.sign_in_button_xpath)
+        self.wait_for_element_to_be_clickable(self.main_page_button_xpath)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
 
