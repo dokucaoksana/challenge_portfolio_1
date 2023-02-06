@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 from pages.login_page import LoginPage
 
 
-class Dashboard(BasePage):
+class Dashboard(LoginPage):
     expected_title = "Scouts panel"
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/en'
     main_page_button_xpath = "//span[normalize-space()='Main page']"
