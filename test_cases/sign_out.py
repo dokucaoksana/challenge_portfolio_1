@@ -26,7 +26,7 @@ class SigningOut(unittest.TestCase):
         signOut = AddAMatch(self.driver)
         signOut.signing_out()
         time.sleep(3)
-        signOut.screenshoot_method()
+        #signOut.screenshoot_method()
 
 
 

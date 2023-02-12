@@ -38,7 +38,7 @@ class BasePage():
         WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located((locator_type, locator)))
 
     #def screenshoot_method(self):
-        now_date = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M.%S")
-        name_screenshot = 'screenshot' + now_date + '.png'
-        WebDriver.save_screenshot(self.driver,':\Users\Admin\Documents\GitHub\challenge_portfolio_1\test_cases\screenshots\' + name_screenshot)
+        #now_date = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M.%S")
+        #name_screenshot = 'screenshot' + now_date + '.png'
+        #WebDriver.save_screenshot(self.driver,':\Users\Admin\Documents\GitHub\challenge_portfolio_1\test_cases\screenshots\' + name_screenshot)
 
